@@ -9,5 +9,8 @@ sources:
     tables:
       - name: customer
         description: "This table contains customer information, including personal details and account balance."
+        columns:
+          - name: C_CUSTKEY
+            description: "Unique identifier for each customer."
       - name: nation
       - name: orders

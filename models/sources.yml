@@ -8,5 +8,6 @@ sources:
     schema: public
     tables:
       - name: customer
+        description: "This table contains customer information, including personal details and account balance."
       - name: nation
       - name: orders

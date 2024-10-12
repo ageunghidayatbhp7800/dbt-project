@@ -1,0 +1,12 @@
+# models/sources.yml
+
+version: 3
+
+sources:
+  - name: STG
+    database: stg
+    schema: public
+    tables:
+      - name: customer
+      - name: nation
+      - name: orders

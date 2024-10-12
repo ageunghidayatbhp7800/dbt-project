@@ -7,6 +7,56 @@ sources:
     database: stg
     schema: public
     tables:
-      - name: customer
-      - name: nation
-      - name: orders
+      - name: CUSTOMER
+        description: "This table contains customer information, including personal details and account balance."
+        columns:
+          - name: C_CUSTKEY
+            description: "Unique identifier for each customer."
+          - name: C_NAME
+            description: "Name of the customer."
+          - name: C_ADDRESS
+            description: "Address of the customer."
+          - name: C_NATIONKEY
+            description: "Foreign key referencing the nation table."
+          - name: C_PHONE
+            description: "Phone number of the customer."
+          - name: C_ACCTBAL
+            description: "Account balance of the customer."
+          - name: C_MKTSEGMENT
+            description: "Market segment to which the customer belongs."
+          - name: C_COMMENT
+            description: "Additional comments related to the customer."
+
+      - name: NATION
+        description: "This table contains information about different nations."
+        columns:
+          - name: N_NATIONKEY
+            description: "Unique identifier for each nation."
+          - name: N_NAME
+            description: "Name of the nation."
+          - name: N_REGIONKEY
+            description: "Foreign key referencing the region table."
+          - name: N_COMMENT
+            description: "Additional comments related to the nation."
+
+      - name: ORDERS
+        description: "This table contains order details made by customers."
+        columns:
+          - name: O_ORDERKEY
+            description: "Unique identifier for each order."
+          - name: O_CUSTKEY
+            description: "Foreign key referencing the customer table."
+          - name: O_ORDERSTATUS
+            description: "Status of the order (e.g., 'O' for open, 'C' for closed)."
+          - name: O_TOTALPRICE
+            description: "Total price of the order."
+          - name: O_ORDERDATE
+            description: "Date when the order was placed."
+          - name: O_ORDERPRIORITY
+            description: "Priority level of the order."
+          - name: O_CLERK
+            description: "Identifier for the clerk handling the order."
+          - name: O_SHIPPRIORITY
+            description: "Shipping priority level of the order."
+          - name: O_COMMENT
+            description: "Additional comments related to the order."
